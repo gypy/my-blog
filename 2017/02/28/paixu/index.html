@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>经典算法排序 | 侠客留步</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="收集了十个比较经典的算法排序,希望能帮到渴求知识的你们
+迫 不 及 待">
+<meta property="og:type" content="article">
+<meta property="og:title" content="经典算法排序">
+<meta property="og:url" content="http://yoursite.com/2017/02/28/paixu/index.html">
+<meta property="og:site_name" content="侠客留步">
+<meta property="og:description" content="收集了十个比较经典的算法排序,希望能帮到渴求知识的你们
+迫 不 及 待">
+<meta property="og:updated_time" content="2017-02-28T08:30:02.636Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="经典算法排序">
+<meta name="twitter:description" content="收集了十个比较经典的算法排序,希望能帮到渴求知识的你们
+迫 不 及 待">
+  
+    <link rel="alternative" href="/atom.xml" title="侠客留步" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/my-blog/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/my-blog/css/style.css">
+  <link rel="stylesheet" href="/my-blog/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/my-blog/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/my-blog/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/my-blog/js/pace.js"></script>
+    <link href="/my-blog/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/my-blog/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/my-blog/" class="profilepic">
+            
+            <img lazy-src="/my-blog/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/my-blog/" title="Hi Mate">前端小小牛</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="#" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="#" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                            
+                                <a class="fl weibo" target="_blank" href="#" title="weibo">weibo</a>
+                            
+                                <a class="fl google" target="_blank" href="#" title="google">google</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/my-blog/tags/Node-JS/" style="font-size: 10px;">Node.JS</a> <a href="/my-blog/tags/宅男技术/" style="font-size: 10px;">宅男技术</a> <a href="/my-blog/tags/服务器/" style="font-size: 10px;">服务器</a> <a href="/my-blog/tags/经典/" style="font-size: 10px;">经典</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="#">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">交友、旅行、新鲜事物、迎接新挑战。</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/my-blog/" title="Me">前端小小牛</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/my-blog/" class="profilepic">
+                
+                    <img lazy-src="/my-blog/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/my-blog/" title="Me">前端小小牛</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="#" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="#" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+                    
+                        <a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+                    
+                        <a class="google" target="_blank" href="#" title="google">google</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-paixu" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/my-blog/2017/02/28/paixu/" class="article-date">
+      <time datetime="2017-02-28T08:16:33.126Z" itemprop="datePublished">2017-02-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      经典算法排序
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/my-blog/tags/经典/">经典</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>收集了十个比较经典的算法排序,希望能帮到渴求知识的你们</p>
+<h2 id="迫-不-及-待"><a href="#迫-不-及-待" class="headerlink" title="迫 不 及 待"></a>迫 不 及 待</h2><a id="more"></a>
+<h3 id="一-冒泡排序"><a href="#一-冒泡排序" class="headerlink" title="一:冒泡排序"></a>一:冒泡排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function bubbleSort(arr) &#123;</div><div class="line">    var len = arr.length;</div><div class="line">    for (var i = 0; i &lt; len; i++) &#123;</div><div class="line">        for (var j = 0; j &lt; len - 1 - i; j++) &#123;</div><div class="line">            if (arr[j] &gt; arr[j+1]) &#123;        //相邻元素两两对比</div><div class="line">                var temp = arr[j+1];        //元素交换</div><div class="line">                arr[j+1] = arr[j];</div><div class="line">                arr[j] = temp;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="二-选择排序"><a href="#二-选择排序" class="headerlink" title="二:选择排序"></a>二:选择排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">function selectionSort(arr) &#123;</div><div class="line">    var len = arr.length;</div><div class="line">    var minIndex, temp;</div><div class="line">    for (var i = 0; i &lt; len - 1; i++) &#123;</div><div class="line">        minIndex = i;</div><div class="line">        for (var j = i + 1; j &lt; len; j++) &#123;</div><div class="line">            if (arr[j] &lt; arr[minIndex]) &#123;     //寻找最小的数</div><div class="line">                minIndex = j;                 //将最小数的索引保存</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        temp = arr[i];</div><div class="line">        arr[i] = arr[minIndex];</div><div class="line">        arr[minIndex] = temp;</div><div class="line">    &#125;</div><div class="line">    return arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="三-插入排序"><a href="#三-插入排序" class="headerlink" title="三:插入排序"></a>三:插入排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function insertionSort(arr) &#123;</div><div class="line">    var len = arr.length;</div><div class="line">    var preIndex, current;</div><div class="line">    for (var i = 1; i &lt; len; i++) &#123;</div><div class="line">        preIndex = i - 1;</div><div class="line">        current = arr[i];</div><div class="line">        while(preIndex &gt;= 0 &amp;&amp; arr[preIndex] &gt; current) &#123;</div><div class="line">            arr[preIndex+1] = arr[preIndex];</div><div class="line">            preIndex--;</div><div class="line">        &#125;</div><div class="line">        arr[preIndex+1] = current;</div><div class="line">    &#125;</div><div class="line">    return arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="四-希尔排序"><a href="#四-希尔排序" class="headerlink" title="四:希尔排序"></a>四:希尔排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">function shellSort(arr) &#123;</div><div class="line">    var len = arr.length,</div><div class="line">        temp,</div><div class="line">        gap = 1;</div><div class="line">    while(gap &lt; len/3) &#123;          //动态定义间隔序列</div><div class="line">        gap =gap*3+1;</div><div class="line">    &#125;</div><div class="line">    for (gap; gap&gt; 0; gap = Math.floor(gap/3)) &#123;</div><div class="line">        for (var i = gap; i &lt; len; i++) &#123;</div><div class="line">            temp = arr[i];</div><div class="line">            for (var j = i-gap; j &gt; 0 &amp;&amp; arr[j]&gt; temp; j-=gap) &#123;</div><div class="line">                arr[j+gap] = arr[j];</div><div class="line">            &#125;</div><div class="line">            arr[j+gap] = temp;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="五-归并排序"><a href="#五-归并排序" class="headerlink" title="五:归并排序"></a>五:归并排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">function mergeSort(arr) &#123;  //采用自上而下的递归方法</div><div class="line">    var len = arr.length;</div><div class="line">    if(len &lt; 2) &#123;</div><div class="line">        return arr;</div><div class="line">    &#125;</div><div class="line">    var middle = Math.floor(len / 2),</div><div class="line">        left = arr.slice(0, middle),</div><div class="line">        right = arr.slice(middle);</div><div class="line">    return merge(mergeSort(left), mergeSort(right));</div><div class="line">&#125;</div><div class="line"></div><div class="line">function merge(left, right)</div><div class="line">&#123;</div><div class="line">    var result = [];</div><div class="line"></div><div class="line">    while (left.length&gt;0 &amp;&amp; right.length&gt;0) &#123;</div><div class="line">        if (left[0] &lt;= right[0]) &#123;</div><div class="line">            result.push(left.shift());</div><div class="line">        &#125; else &#123;</div><div class="line">            result.push(right.shift());</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    while (left.length)</div><div class="line">        result.push(left.shift());</div><div class="line"></div><div class="line">    while (right.length)</div><div class="line">        result.push(right.shift());</div><div class="line"></div><div class="line">    return result;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="六-快速排序"><a href="#六-快速排序" class="headerlink" title="六:快速排序"></a>六:快速排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">function quickSort(arr, left, right) &#123;</div><div class="line">    var len = arr.length,</div><div class="line">        partitionIndex,</div><div class="line">        left = typeof left != &apos;number&apos; ? 0 : left,</div><div class="line">        right = typeof right != &apos;number&apos; ? len - 1 : right;</div><div class="line"></div><div class="line">    if (left &lt; right) &#123;</div><div class="line">        partitionIndex = partition(arr, left, right);</div><div class="line">        quickSort(arr, left, partitionIndex-1);</div><div class="line">        quickSort(arr, partitionIndex+1, right);</div><div class="line">    &#125;</div><div class="line">    return arr;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function partition(arr, left ,right) &#123;     //分区操作</div><div class="line">    var pivot = left,                      //设定基准值（pivot）</div><div class="line">        index = pivot + 1;</div><div class="line">    for (var i = index; i &lt;= right; i++) &#123;</div><div class="line">        if (arr[i] &lt; arr[pivot]) &#123;</div><div class="line">            swap(arr, i, index);</div><div class="line">            index++;</div><div class="line">        &#125;        </div><div class="line">    &#125;</div><div class="line">    swap(arr, pivot, index - 1);</div><div class="line">    return index-1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function swap(arr, i, j) &#123;</div><div class="line">    var temp = arr[i];</div><div class="line">    arr[i] = arr[j];</div><div class="line">    arr[j] = temp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="七-堆排序"><a href="#七-堆排序" class="headerlink" title="七:堆排序"></a>七:堆排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">var len;    //因为声明的多个函数都需要数据长度，所以把len设置成为全局变量</div><div class="line"></div><div class="line">function buildMaxHeap(arr) &#123;   //建立大顶堆</div><div class="line">    len = arr.length;</div><div class="line">    for (var i = Math.floor(len/2); i &amp;gt;= 0; i--) &#123;</div><div class="line">        heapify(arr, i);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function heapify(arr, i) &#123;     //堆调整</div><div class="line">    var left = 2 * i + 1,</div><div class="line">        right = 2 * i + 2,</div><div class="line">        largest = i;</div><div class="line"></div><div class="line">    if (left &lt; len &amp;&amp; arr[left] &gt; arr[largest]) &#123;</div><div class="line">        largest = left;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    if (right &lt; len &amp;&amp; arr[right] &gt; arr[largest]) &#123;</div><div class="line">        largest = right;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    if (largest != i) &#123;</div><div class="line">        swap(arr, i, largest);</div><div class="line">        heapify(arr, largest);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function swap(arr, i, j) &#123;</div><div class="line">    var temp = arr[i];</div><div class="line">    arr[i] = arr[j];</div><div class="line">    arr[j] = temp;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function heapSort(arr) &#123;</div><div class="line">    buildMaxHeap(arr);</div><div class="line"></div><div class="line">    for (var i = arr.length-1; i &gt; 0; i--) &#123;</div><div class="line">        swap(arr, 0, i);</div><div class="line">        len--;</div><div class="line">        heapify(arr, 0);</div><div class="line">    &#125;</div><div class="line">    return arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="八-计数排序"><a href="#八-计数排序" class="headerlink" title="八:计数排序"></a>八:计数排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">function countingSort(arr, maxValue) &#123;</div><div class="line">    var bucket = new Array(maxValue+1),</div><div class="line">        sortedIndex = 0;</div><div class="line">        arrLen = arr.length,</div><div class="line">        bucketLen = maxValue + 1;</div><div class="line"></div><div class="line">    for (var i = 0; i &lt; arrLen; i++) &#123;</div><div class="line">        if (!bucket[arr[i]]) &#123;</div><div class="line">            bucket[arr[i]] = 0;</div><div class="line">        &#125;</div><div class="line">        bucket[arr[i]]++;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    for (var j = 0; j &lt; bucketLen; j++) &#123;</div><div class="line">        while(bucket[j] &gt; 0) &#123;</div><div class="line">            arr[sortedIndex++] = j;</div><div class="line">            bucket[j]--;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    return arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="九-桶排序"><a href="#九-桶排序" class="headerlink" title="九:桶排序"></a>九:桶排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">function bucketSort(arr, bucketSize) &#123;</div><div class="line">    if (arr.length === 0) &#123;</div><div class="line">      return arr;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    var i;</div><div class="line">    var minValue = arr[0];</div><div class="line">    var maxValue = arr[0];</div><div class="line">    for (i = 1; i &lt; arr.length; i++) &#123;</div><div class="line">      if (arr[i] &lt; minValue) &#123;</div><div class="line">          minValue = arr[i];                //输入数据的最小值</div><div class="line">      &#125; else if (arr[i] &gt; maxValue) &#123;</div><div class="line">          maxValue = arr[i];                //输入数据的最大值</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    //桶的初始化</div><div class="line">    var DEFAULT_BUCKET_SIZE = 5;            //设置桶的默认数量为5</div><div class="line">    bucketSize = bucketSize || DEFAULT_BUCKET_SIZE;</div><div class="line">    var bucketCount = Math.floor((maxValue - minValue) / bucketSize) + 1;   </div><div class="line">    var buckets = new Array(bucketCount);</div><div class="line">    for (i = 0; i &lt; buckets.length; i++) &#123;</div><div class="line">        buckets[i] = [];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    //利用映射函数将数据分配到各个桶中</div><div class="line">    for (i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">        buckets[Math.floor((arr[i] - minValue) / bucketSize)].push(arr[i]);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    arr.length = 0;</div><div class="line">    for (i = 0; i &lt; buckets.length; i++) &#123;</div><div class="line">        insertionSort(buckets[i]);                      //对每个桶进行排序，这里使用了插入排序</div><div class="line">        for (var j = 0; j &lt; buckets[i].length; j++) &#123;</div><div class="line">            arr.push(buckets[i][j]);                      </div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    return arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="十-基数排序"><a href="#十-基数排序" class="headerlink" title="十:基数排序"></a>十:基数排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">var counter = [];</div><div class="line">function radixSort(arr, maxDigit) &#123;</div><div class="line">    var mod = 10;</div><div class="line">    var dev = 1;</div><div class="line">    for (var i = 0; i &lt; maxDigit; i++, dev *= 10, mod *= 10) &#123;</div><div class="line">        for(var j = 0; j &lt; arr.length; j++) &#123;</div><div class="line">            var bucket = parseInt((arr[j] % mod) / dev);</div><div class="line">            if(counter[bucket]==null) &#123;</div><div class="line">                counter[bucket] = [];</div><div class="line">            &#125;</div><div class="line">            counter[bucket].push(arr[j]);</div><div class="line">        &#125;</div><div class="line">        var pos = 0;</div><div class="line">        for(var j = 0; j &lt; counter.length; j++) &#123;</div><div class="line">            var value = null;</div><div class="line">            if(counter[j]!=null) &#123;</div><div class="line">                while ((value = counter[j].shift()) != null) &#123;</div><div class="line">                      arr[pos++] = value;</div><div class="line">                &#125;</div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭">×</a>
+            <div class="shang_tit">
+              <p>开心就好</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/my-blog/2017/02/28/paixu/">经典算法排序</a></p>
+        <p><span>文章作者:</span><a href="/my-blog/" title="访问 前端小小牛 的个人博客">前端小小牛</a></p>
+        <p><span>发布时间:</span>2017年02月28日 - 16时16分</p>
+        <p><span>最后更新:</span>2017年02月28日 - 16时30分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/my-blog/2017/02/28/paixu/" title="经典算法排序">http://yoursite.com/my-blog/2017/02/28/paixu/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/my-blog/2017/02/28/paixu/　　作者: 前端小小牛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/my-blog/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/my-blog/2017/02/28/web服务/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">服务器入门</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#迫-不-及-待"><span class="toc-number">1.</span> <span class="toc-text">迫 不 及 待</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-冒泡排序"><span class="toc-number">1.1.</span> <span class="toc-text">一:冒泡排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-选择排序"><span class="toc-number">1.2.</span> <span class="toc-text">二:选择排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三-插入排序"><span class="toc-number">1.3.</span> <span class="toc-text">三:插入排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四-希尔排序"><span class="toc-number">1.4.</span> <span class="toc-text">四:希尔排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五-归并排序"><span class="toc-number">1.5.</span> <span class="toc-text">五:归并排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六-快速排序"><span class="toc-number">1.6.</span> <span class="toc-text">六:快速排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七-堆排序"><span class="toc-number">1.7.</span> <span class="toc-text">七:堆排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#八-计数排序"><span class="toc-number">1.8.</span> <span class="toc-text">八:计数排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#九-桶排序"><span class="toc-number">1.9.</span> <span class="toc-text">九:桶排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十-基数排序"><span class="toc-number">1.10.</span> <span class="toc-text">十:基数排序</span></a></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/my-blog/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2017/02/28/paixu/" data-title="经典算法排序" data-url="http://yoursite.com/my-blog/2017/02/28/paixu/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"null"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/my-blog/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/my-blog/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/my-blog/2017/02/28/web服务/" title="下一篇: 服务器入门">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/my-blog/2017/02/28/paixu/">经典算法排序</a></li><li class="post-list-item"><a class="post-list-link" href="/my-blog/2017/02/28/web服务/">服务器入门</a></li><li class="post-list-item"><a class="post-list-link" href="/my-blog/2017/02/28/Node js/">Node.JS文件操作</a></li><li class="post-list-item"><a class="post-list-link" href="/my-blog/2017/02/28/boke/">Hexo + GitHub搭建个人博客</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 前端小小牛
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >侠客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/my-blog/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/my-blog/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
