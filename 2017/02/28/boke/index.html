@@ -13,7 +13,7 @@ Quick Start">
 <meta property="og:site_name" content="侠客留步">
 <meta property="og:description" content="本教程只是简单的介绍,估计从来没有用过的会看不懂,没关系，欢迎来请教。稍微懂点的,应该会一看就懂的ヾ(ﾟ∀ﾟゞ)ヾ
 Quick Start">
-<meta property="og:updated_time" content="2017-02-28T07:24:51.402Z">
+<meta property="og:updated_time" content="2017-02-28T09:26:56.507Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo + GitHub搭建个人博客">
 <meta name="twitter:description" content="本教程只是简单的介绍,估计从来没有用过的会看不懂,没关系，欢迎来请教。稍微懂点的,应该会一看就懂的ヾ(ﾟ∀ﾟゞ)ヾ
@@ -247,14 +247,56 @@ Quick Start">
           
         <p>本教程只是简单的介绍,估计从来没有用过的会看不懂,没关系，欢迎来请教。<br>稍微懂点的,应该会一看就懂的ヾ(ﾟ∀ﾟゞ)ヾ</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a>
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<h3 id="基础准备"><a href="#基础准备" class="headerlink" title="基础准备"></a>基础准备</h3><p><strong>1: 安装Node.js</strong></p>
+<ul>
+<li>到Node.js官网下载,并按照步骤安装  <a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a></li>
+<li>node -v </li>
+<li>出现版本号，说明安装成功</li>
+</ul>
+<p><strong>2:安装Git</strong></p>
+<ul>
+<li>下载安装Git <a href="https://git-scm.com/downloads" target="_blank" rel="external">https://git-scm.com/downloads</a></li>
+<li>git –version</li>
+<li>出现版本号，说明安装成功</li>
+<li>创建reposity<br>在GitHub上创建reposity（没有Github的去注册一个）,注意,Repository name 是一个博客的名字,比如我的:my-blog</li>
+</ul>
+<p><strong>3:安装Hexo</strong></p>
+<ul>
+<li>桌面打开命令窗口执行 npm install -g hexo </li>
+<li>安装成功后在任意一个盘新建文件夹(最好英文),命令窗口执行  hexo init  </li>
+<li>本地服务启动 hexo server<br>浏览器输入 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></li>
+</ul>
+<h3 id="同步博客到github"><a href="#同步博客到github" class="headerlink" title="同步博客到github"></a>同步博客到github</h3><p>1：修改文件</p>
+<ul>
+<li>博客根目录下找到_config.yml文件</li>
+<li>用Sublime Text2之类的程序打开修改</li>
+<li>deploy:<br>type: git<br>repository:<strong><strong>**</strong></strong>(你Github上创建的reposity地址)<br>branch: gh-pages</li>
+</ul>
+<p>2：然后执行如下命令</p>
+<ul>
+<li>npm install hexo-deployer-git –save</li>
+</ul>
+<p>3：再执行</p>
+<ul>
+<li>hexo deploy</li>
+</ul>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>1: generate 生成静态文件</p>
+<ul>
+<li>hexo g</li>
+</ul>
+<p>2: server 启动服务器</p>
+<ul>
+<li>（成功后可以查看本地的更改后的效果<a href="http://localhost:4000/）" target="_blank" rel="external">http://localhost:4000/）</a></li>
+<li>hexo s</li>
+</ul>
+<p>3: deploy 部署网站。部署网站前，需要预先生成静态文件（hexo g）</p>
+<ul>
+<li>hexo d</li>
+</ul>
+<p>4: clean 清除缓存文件（db.josn）和已生成的静态文件（publick）。(如果部署后没有发生改变，可以下面命令清除缓存后，就可以看到效果了)</p>
+<ul>
+<li>hexo clean</li>
+</ul>
 
       
       
@@ -312,7 +354,7 @@ Quick Start">
         <p><span>本文标题:</span><a href="/my-blog/2017/02/28/boke/">Hexo + GitHub搭建个人博客</a></p>
         <p><span>文章作者:</span><a href="/my-blog/" title="访问 前端小小牛 的个人博客">前端小小牛</a></p>
         <p><span>发布时间:</span>2017年02月28日 - 14时28分</p>
-        <p><span>最后更新:</span>2017年02月28日 - 15时24分</p>
+        <p><span>最后更新:</span>2017年02月28日 - 17时26分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/my-blog/2017/02/28/boke/" title="Hexo + GitHub搭建个人博客">http://yoursite.com/my-blog/2017/02/28/boke/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/my-blog/2017/02/28/boke/　　作者: 前端小小牛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -345,7 +387,7 @@ Quick Start">
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基础准备"><span class="toc-number">1.1.</span> <span class="toc-text">基础准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#同步博客到github"><span class="toc-number">1.2.</span> <span class="toc-text">同步博客到github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用命令"><span class="toc-number">1.3.</span> <span class="toc-text">常用命令</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
