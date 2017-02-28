@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Node.JS文件操作 | 侠客留步</title>
+  <title>CSS的相关知识 | 侠客留步</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Node.JS的一些基本的文件操作">
+  <meta name="description" content="CSS的知识深似海,我的这些只不过是大海里的几滴而已,不过对于初学者还是有很大帮助的，也可以对大神一种检测。
+快来体验吧">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node.JS文件操作">
-<meta property="og:url" content="http://yoursite.com/2017/02/28/Node js/index.html">
+<meta property="og:title" content="CSS的相关知识">
+<meta property="og:url" content="http://yoursite.com/2017/02/28/css/index.html">
 <meta property="og:site_name" content="侠客留步">
-<meta property="og:description" content="Node.JS的一些基本的文件操作">
-<meta property="og:updated_time" content="2017-02-28T03:37:18.543Z">
+<meta property="og:description" content="CSS的知识深似海,我的这些只不过是大海里的几滴而已,不过对于初学者还是有很大帮助的，也可以对大神一种检测。
+快来体验吧">
+<meta property="og:updated_time" content="2017-02-28T11:29:06.956Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Node.JS文件操作">
-<meta name="twitter:description" content="Node.JS的一些基本的文件操作">
+<meta name="twitter:title" content="CSS的相关知识">
+<meta name="twitter:description" content="CSS的知识深似海,我的这些只不过是大海里的几滴而已,不过对于初学者还是有很大帮助的，也可以对大神一种检测。
+快来体验吧">
   
     <link rel="alternative" href="/atom.xml" title="侠客留步" type="application/atom+xml">
   
@@ -200,11 +203,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Node js" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-css" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/my-blog/2017/02/28/Node js/" class="article-date">
-      <time datetime="2017-02-28T06:56:32.151Z" itemprop="datePublished">2017-02-28</time>
+      <a href="/my-blog/2017/02/28/css/" class="article-date">
+      <time datetime="2017-02-28T11:03:34.367Z" itemprop="datePublished">2017-02-28</time>
 </a>
     </div>
   
@@ -217,7 +220,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Node.JS文件操作
+      CSS的相关知识
     </h1>
   
 
@@ -228,7 +231,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/my-blog/tags/Node-JS/">Node.JS</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/my-blog/tags/CSS/">CSS</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -238,16 +241,103 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Node-JS的一些基本的文件操作"><a href="#Node-JS的一些基本的文件操作" class="headerlink" title="Node.JS的一些基本的文件操作"></a>Node.JS的一些基本的文件操作</h1><a id="more"></a>
-<h3 id="一、文件操作"><a href="#一、文件操作" class="headerlink" title="一、文件操作"></a>一、文件操作</h3><h3 id="1-1-相关模块"><a href="#1-1-相关模块" class="headerlink" title="1.1 相关模块"></a>1.1 相关模块</h3><p> 1： Path 路径字符串操作<br> 2： Fs 文件操作<br> 3： Readline 按行读取文本文件<br> 4： 第三方模块 fs-extra</p>
-<h3 id="1-2-path模块"><a href="#1-2-path模块" class="headerlink" title="1.2 path模块"></a>1.2 path模块</h3><p> 1： path.basename(path[, ext]) 注意第二个参数的用户，获取文件名<br> 2： path.dirname(path) 获取文件目录<br> 3： path.extname(path) 获取文件的扩展名<br> 4： path.format(pathObject) 和parse(pathString)<br> 5： path.isAbsolute(path) 判断是否是绝对路径<br> 6： path.join([…paths]) 拼接路径字符串<br> 7： path.normalize(path) 将非标准路径转换为标准路径<br> 8： path.sep 获取操作系统的文件路径分隔符</p>
-<h3 id="1-3-fs模块"><a href="#1-3-fs模块" class="headerlink" title="1.3 fs模块"></a>1.3 fs模块</h3><p>   Fs模块对文件的几乎所有的操作都有同步和异步两种形式。<br>参考：<a href="http://wenku.baidu.com/view/fbcf1bb7c77da26925c5b015.html?from=search" target="_blank" rel="external">http://wenku.baidu.com/view/fbcf1bb7c77da26925c5b015.html?from=search</a></p>
-<h3 id="1-3-1-同步异步读取文件"><a href="#1-3-1-同步异步读取文件" class="headerlink" title="1.3.1 同步异步读取文件"></a>1.3.1 同步异步读取文件</h3><p> 1： fs.readFile(file, data, [,option], callback)<br> 2： fs.readFileSync(file, data, callback)</p>
-<h3 id="1-3-2-同步异步写文件"><a href="#1-3-2-同步异步写文件" class="headerlink" title="1.3.2 同步异步写文件"></a>1.3.2 同步异步写文件</h3><p> 1：fs.writeFile(file, data, [,option], callback)<br> 2：fs.writeFileSync(file, data, callback)</p>
-<h3 id="1-3-3-同步异步向文件中追加内容"><a href="#1-3-3-同步异步向文件中追加内容" class="headerlink" title="1.3.3 同步异步向文件中追加内容"></a>1.3.3 同步异步向文件中追加内容</h3><p> 1：fs.appendFile(file, data, [,options], callback)<br> 2：fs.appendFileSync(file, data, [,options])</p>
-<h3 id="1-3-4-其他文件操作"><a href="#1-3-4-其他文件操作" class="headerlink" title="1.3.4 其他文件操作"></a>1.3.4 其他文件操作</h3><p> 1：Fs.exists(path, callback(exists)) //验证是否存在<br> 2：Fs.stat(path, callback(err, stats))//获取文件信息<br> 3：Fs.unlink(path, callback) //删除文件<br> 4：Fs.rename(oldPath, newPath, callback) 重命名文件或者目录<br> 5：Fs.rename(oldPath) 移动文件</p>
-<h3 id="1-3-5-目录操作"><a href="#1-3-5-目录操作" class="headerlink" title="1.3.5 目录操作"></a>1.3.5 目录操作</h3><p> 1：Fs.mkdir(path, [,model],callback) //创建一个目录<br> 2：Fs.rmdir(path, callback) //删除一个目录<br> 3：Fs.readdir(path, callback) //读取一个目录</p>
-<h3 id="1-3-6-监视文件"><a href="#1-3-6-监视文件" class="headerlink" title="1.3.6 监视文件"></a>1.3.6 监视文件</h3><p> fs.watchFile(filename, [,options], listener(curr, prev))</p>
+        <p>CSS的知识深似海,我的这些只不过是大海里的几滴而已,不过对于初学者还是有很大帮助的，也可以对大神一种检测。</p>
+<h2 id="快来体验吧"><a href="#快来体验吧" class="headerlink" title="快来体验吧"></a>快来体验吧</h2><a id="more"></a>
+<h3 id="CSS-优先级"><a href="#CSS-优先级" class="headerlink" title="CSS 优先级"></a>CSS 优先级</h3><p>优先级是浏览器是通过判断哪些属性值与元素最相关以决定并应用到该元素上的。优先级仅由选择器组成的匹配规则决定的。如果给一个P标签增加一个类（Class）,运行后Class 中的部分属性并未发生改变，及CSS选择器存在优先级问题。</p>
+<h3 id="选择符优先级"><a href="#选择符优先级" class="headerlink" title="选择符优先级"></a>选择符优先级</h3><p>1：常见的选择器种类：</p>
+<ul>
+<li>内联样式（Inline Style）,如”&lt; span style=”color:black”&gt;…&lt; /span&gt;”</li>
+<li>ID选择符（ID selectors），如#id；</li>
+<li>Class选择符（Class），如 .class {…}、[href=‘’]、:hover；</li>
+<li>标签选择符（Tag）,如 div,:before</li>
+</ul>
+<p>2：每一类选择器的权值不相同，各选择器的优先级是由权值决定的，</p>
+<ul>
+<li>内联样式：1,0,0,0</li>
+<li>ID 选择符：1,0,0</li>
+<li>Class 选择符：1,0</li>
+<li>Tag选择符：1</li>
+</ul>
+<h3 id="CSS-优先级法则"><a href="#CSS-优先级法则" class="headerlink" title="CSS 优先级法则"></a>CSS 优先级法则</h3><ul>
+<li>选择器都有一个权值，权值越大越优先；</li>
+<li>当权值相等时，后出现的样式表设置要优于先出现的样式表设置；</li>
+<li>创作者的规则高于浏览者：即网页编写者设置的CSS 样式的优先权高于浏览器所设置的样式；</li>
+<li>继承的CSS 样式不如后来指定的CSS 样式；</li>
+<li>在同一组属性设置中标有“!important”规则的优先级最大；</li>
+</ul>
+<h3 id="CSS常用模型"><a href="#CSS常用模型" class="headerlink" title="CSS常用模型"></a>CSS常用模型</h3><ul>
+<li><p>盒子模型(Box Model)就是在网页设计中经常用到的CSS技术所使用的一种思维模型。</p>
+</li>
+<li><p>盒子模型相关CSS属性元素内容（element content）、宽度及高度（Width/Height)、内边距（padding）、边框（border） 和 外边距（margin） 。</p>
+</li>
+<li>在 CSS 中，width 和 height 指的是内容区域（element）的宽度和高度。增加内边距、边框和外边距不会影响内容区域的尺寸，但是会增加元素框的总尺寸。假设框的每个边上有 10 个像素的外边距和 5 个像素的内边距。如果希望这个元素框达到 100 个像素，就需要将内容的宽度设置为 70 像素。需要的属性如下：</li>
+</ul>
+<p><strong><em>基本属性</em></strong></p>
+<p>1: Width/Height<br>2: Padding<br>3: Margin<br>4: Boder<br>5: Outline<br>6: 偏移量属性</p>
+<ul>
+<li>Top/Left/Bottom/Right</li>
+</ul>
+<p>7:和.NET WinForm的区别:</p>
+<ul>
+<li>默认情况下Width/Height不包含Padding</li>
+<li>Margin/Padding属性的四个值的顺序是top right bottom left (顺时针)</li>
+</ul>
+<h3 id="纵向Margin合并"><a href="#纵向Margin合并" class="headerlink" title="纵向Margin合并"></a>纵向Margin合并</h3><p>如果</p><p>的纵向margin是12px，那么两个</p><p>之间纵向的距离是多少？按常理来说应该是 12 + 12= 24px，但是答案仍然是 12px。因为纵向的margin是会重叠的，大的会覆盖下的。</p>
+<p>Position属性规定元素的定位类型。这个属性定义建立元素布局所用的定位机制。任何元素都可以定位，不过绝对或固定元素会生成一个块级框，而不论该元素本身是什么类型。相对定位元素会相对于它在正常流中的默认位置偏移。<br>以下是Posistion属性取值范围如下：</p>
+<ul>
+<li>Static 普通流布局（Normal flow） ，默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。</li>
+<li>Relative 支持偏移量属性的普通流布局 ，生成相对定位的元素，相对于其正常位置进行定位。因此，”left:20” 会向元素的 LEFT 位置添加 20 像素。</li>
+<li>Absolute 在容器元素内绝对定位的布局 ，生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。</li>
+<li>Fixed 在显示范围内的绝对定位布局，生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。</li>
+</ul>
+<h3 id="Float属性"><a href="#Float属性" class="headerlink" title="Float属性"></a>Float属性</h3><p>float 属性定义元素在哪个方向浮动。以往这个属性总应用于图像，使文本围绕在图像周围，不过在 CSS 中，任何元素都可以浮动。浮动元素会生成一个块级框，而不论它本身是何种元素。</p>
+<h3 id="Stacking-context"><a href="#Stacking-context" class="headerlink" title="Stacking context"></a>Stacking context</h3><p>提供z-index栈空间特性并影响子元素渲染顺序的结构，称之为stacking context。</p>
+<p>浏览器会给符合下面规则的dom元素分配一个Stacking context。</p>
+<ul>
+<li>root元素(html)</li>
+<li>「已定位」元素（position: absolute or relative）且 指定z-index值非auto的元素</li>
+<li>flex item且指定z-index值非auto的元素</li>
+<li>opacity小于1的元素</li>
+<li>指定transform值非none的元素</li>
+<li>指定mix-blend-mode值非normal的元素</li>
+<li>指定filter值非none的元素</li>
+<li>指定isolation值为isolate的元素</li>
+<li>在will-change属性上指定值为上述列表任意属性的元素</li>
+<li>指定-webkit-overflow-scrolling值为touch的元素</li>
+</ul>
+<h3 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h3><ul>
+<li>只有Positioned(Position不为static)元素的的z-index属性才有效</li>
+<li>z-index可以是负数</li>
+<li>没有z-index或z-index无效的元素,相当于z-index为0.</li>
+</ul>
+<h3 id="Stacking-order"><a href="#Stacking-order" class="headerlink" title="Stacking order"></a>Stacking order</h3><ul>
+<li>根据DOM树结构，具有stacking context的元素会形成一个树形结构。</li>
+<li>一个stacking context中的元素会根据z-index决定叠加顺序。z-index大的靠前</li>
+<li>z-index 0级元素中，有stacking context的元素的叠加顺序靠前</li>
+<li>以上条件不能区分时，使用DOM树中的顺序决定叠加顺序。</li>
+</ul>
+<h2 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h2><h3 id="像素渲染流水线"><a href="#像素渲染流水线" class="headerlink" title="像素渲染流水线"></a>像素渲染流水线</h3><p>提升性能需要在构造流水线中每个元素都需要注意：<br>1： Style</p>
+<ul>
+<li>降低样式选择器的复杂度</li>
+<li>减少需要执行样式计算的元素的个数<br>2： Layout</li>
+<li>尽可能避免触发布局</li>
+<li>几乎所有的布局都是在整个文档范围内发生的。</li>
+<li>使用flexbox替代老的布局模型</li>
+<li>避免强制同步布局事件的发生</li>
+<li>避免快速连续的布局<br>3： Paint</li>
+<li>除了transform和opacity之外，修改任何属性都会触发绘制</li>
+<li>提升移动或渐变元素的绘制层</li>
+<li>减少绘制区域</li>
+<li>简化绘制的复杂度</li>
+</ul>
+<h3 id="CSS-选择器性能"><a href="#CSS-选择器性能" class="headerlink" title="CSS 选择器性能"></a>CSS 选择器性能</h3><ul>
+<li>一个选择器的最右端是这个选择器的关键条件（Key Selector）</li>
+<li>浏览器按照从右向左的方式匹配选择器，因此应该将更具体的条件尽可能放在右端。</li>
+<li>避免使用*规则</li>
+<li>选择器尽可能短</li>
+<li>ID选择符前面不要再加限定符</li>
+<li>没必要用Tag选择符限定Class选择符</li>
+</ul>
 
       
       
@@ -302,13 +392,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/my-blog/2017/02/28/Node js/">Node.JS文件操作</a></p>
+        <p><span>本文标题:</span><a href="/my-blog/2017/02/28/css/">CSS的相关知识</a></p>
         <p><span>文章作者:</span><a href="/my-blog/" title="访问 前端小小牛 的个人博客">前端小小牛</a></p>
-        <p><span>发布时间:</span>2017年02月28日 - 14时56分</p>
-        <p><span>最后更新:</span>2017年02月28日 - 11时37分</p>
+        <p><span>发布时间:</span>2017年02月28日 - 19时03分</p>
+        <p><span>最后更新:</span>2017年02月28日 - 19时29分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/my-blog/2017/02/28/Node js/" title="Node.JS文件操作">http://yoursite.com/my-blog/2017/02/28/Node js/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/my-blog/2017/02/28/Node js/　　作者: 前端小小牛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/my-blog/2017/02/28/css/" title="CSS的相关知识">http://yoursite.com/my-blog/2017/02/28/css/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/my-blog/2017/02/28/css/　　作者: 前端小小牛" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/my-blog/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -321,18 +411,9 @@
 
 <nav id="article-nav">
   
-    <a href="/my-blog/2017/02/28/web服务/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          服务器入门
-        
-      </div>
-    </a>
   
-  
-    <a href="/my-blog/2017/02/28/boke/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo + GitHub搭建个人博客</div>
+    <a href="/my-blog/2017/02/28/paixu/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">经典算法排序</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -343,7 +424,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Node-JS的一些基本的文件操作"><span class="toc-number">1.</span> <span class="toc-text">Node.JS的一些基本的文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、文件操作"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、文件操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-相关模块"><span class="toc-number">1.0.2.</span> <span class="toc-text">1.1 相关模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-path模块"><span class="toc-number">1.0.3.</span> <span class="toc-text">1.2 path模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-fs模块"><span class="toc-number">1.0.4.</span> <span class="toc-text">1.3 fs模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-同步异步读取文件"><span class="toc-number">1.0.5.</span> <span class="toc-text">1.3.1 同步异步读取文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-同步异步写文件"><span class="toc-number">1.0.6.</span> <span class="toc-text">1.3.2 同步异步写文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-3-同步异步向文件中追加内容"><span class="toc-number">1.0.7.</span> <span class="toc-text">1.3.3 同步异步向文件中追加内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-4-其他文件操作"><span class="toc-number">1.0.8.</span> <span class="toc-text">1.3.4 其他文件操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-5-目录操作"><span class="toc-number">1.0.9.</span> <span class="toc-text">1.3.5 目录操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-6-监视文件"><span class="toc-number">1.0.10.</span> <span class="toc-text">1.3.6 监视文件</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#快来体验吧"><span class="toc-number">1.</span> <span class="toc-text">快来体验吧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-优先级"><span class="toc-number">1.1.</span> <span class="toc-text">CSS 优先级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择符优先级"><span class="toc-number">1.2.</span> <span class="toc-text">选择符优先级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-优先级法则"><span class="toc-number">1.3.</span> <span class="toc-text">CSS 优先级法则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS常用模型"><span class="toc-number">1.4.</span> <span class="toc-text">CSS常用模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#纵向Margin合并"><span class="toc-number">1.5.</span> <span class="toc-text">纵向Margin合并</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Float属性"><span class="toc-number">1.6.</span> <span class="toc-text">Float属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stacking-context"><span class="toc-number">1.7.</span> <span class="toc-text">Stacking context</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#z-index"><span class="toc-number">1.8.</span> <span class="toc-text">z-index</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stacking-order"><span class="toc-number">1.9.</span> <span class="toc-text">Stacking order</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#性能"><span class="toc-number">2.</span> <span class="toc-text">性能</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#像素渲染流水线"><span class="toc-number">2.1.</span> <span class="toc-text">像素渲染流水线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-选择器性能"><span class="toc-number">2.2.</span> <span class="toc-text">CSS 选择器性能</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -391,7 +472,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2017/02/28/Node js/" data-title="Node.JS文件操作" data-url="http://yoursite.com/my-blog/2017/02/28/Node js/"></div>
+    <div class="ds-thread" data-thread-key="2017/02/28/css/" data-title="CSS的相关知识" data-url="http://yoursite.com/my-blog/2017/02/28/css/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -414,13 +495,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/my-blog/2017/02/28/web服务/" title="上一篇: 服务器入门">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/my-blog/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/my-blog/2017/02/28/boke/" title="下一篇: Hexo + GitHub搭建个人博客">
+            <a href="/my-blog/2017/02/28/paixu/" title="下一篇: 经典算法排序">
                 <i class="fa fa-angle-right"></i>
             </a>
         
